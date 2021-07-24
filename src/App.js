@@ -24,7 +24,7 @@ export default function App() {
   }
   return (
     <div className="App">
-      <h1>📕 books</h1>
+      <h1>📕 my Books</h1>
       <h2>catagory of books i have</h2>
       {Object.keys(myBooks).map((item) => (
         <button
