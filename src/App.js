@@ -3,31 +3,35 @@ import React, { useState } from "react";
 import "./styles.css";
 
 var myBooks = {
-  hindi: [
-    { name: "bharat ko jaano", ratings: "5/5" },
-    { name: "jai hind", ratings: "3/5" }
+  novel: [
+    { name: "The White Tiger ", ratings: "5/5" },
+    { name: "Witness The Night ", ratings: "3/5" }
   ],
-  english: [
-    { name: "Hey! Do You Know Me", ratings: "4/5" },
-    { name: "Wings Of Fire", ratings: "5/5" }
+  autobiograohy: [
+    { name: "Wings Of Fire-Dr Abdul Kalam", ratings: "4/5" },
+    { name: "A Promised Land-Barack Obama", ratings: "5/5" }
   ],
-  something: [
-    { name: "There is something", ratings: "3/5" },
-    { name: "something something", ratings: "2/5" }
+  fiction: [
+    { name: "The Hare", ratings: "3/5" },
+    { name: "The Four Winds", ratings: "2/5" }
   ]
 };
 
+let aboutBooks = '"A room without books is like a body without a soul."';
+
 export default function App() {
-  const [Detail, setDetail] = useState("something");
+  const [Detail, setDetail] = useState("fiction");
   function onClickHandler(item) {
     setDetail(item);
   }
   return (
     <div className="App">
-      <h1>📕 my Books</h1>
-      <h2>catagory of books i have</h2>
+      <h1 className="title">📚 my Books</h1>
+      <h2>{aboutBooks}</h2>
+      <h2>select a genre to get started:</h2>
       {Object.keys(myBooks).map((item) => (
         <button
+          className="button"
           key={item}
           style={{
             padding: "0.5rem",
@@ -41,15 +45,17 @@ export default function App() {
         </button>
       ))}
       <div>
-        <ul>
+        <ul style={{ padding: "0" }}>
           {myBooks[Detail].map((book) => (
             <li
               style={{
                 listStyle: "none",
                 border: "1px solid gray",
-                borderRadius: "0.5rem",
+                borderTopRightRadius: "1rem",
+                borderBottomLeftRadius: "1rem",
                 padding: "1rem",
-                margin: "1rem"
+                margin: "1rem",
+                backgroundColor: "#7BB661"
               }}
             >
               <div>{book.name}</div>

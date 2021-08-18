@@ -1,4 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
 .App {
   font-family: sans-serif;
   text-align: center;
+  font-family: cursive;
+  /* background-color: #F9A8D4; */
+}
+
+.title {
+  background-color: #7bb661;
+  border-bottom-left-radius: 1rem;
+  margin-top: 0;
+}
+
+.button {
+  font-size: 1rem;
+  font-family: cursive;
+  font-weight: 600;
+  transition-duration: 0.4s;
+  border: 2px solid #56a0d3;
+  color: #56a0d3;
+}
+
+.button:hover {
+  background-color: #56a0d3;
+  color: white;
 }
